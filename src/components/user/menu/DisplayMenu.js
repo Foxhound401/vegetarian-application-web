@@ -45,7 +45,6 @@ const DisplayMenu = (props) => {
     if (props.data && props.data.length > 0
         && props.data[menuIndex].listRecipe && props.data[menuIndex].listRecipe.length > 0) {
         total = props.data[menuIndex].listRecipe[0].calo + props.data[menuIndex].listRecipe[1].calo + props.data[menuIndex].listRecipe[2].calo;
-        console.log(total)
         if (props.data[menuIndex].listSnack.length > 0) total = total + props.data[menuIndex].listSnack[0].calo;
         if (props.data[menuIndex].listSnack.length > 1) total = total + props.data[menuIndex].listSnack[1].calo;
         if (props.data[menuIndex].listSnack.length > 2) total = total + props.data[menuIndex].listSnack[2].calo;

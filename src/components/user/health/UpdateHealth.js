@@ -173,7 +173,7 @@ const UpdateHealth = ({token, reload}) => {
             <div className="section-content">
                 <div className="bmi-result">
                     {bmi && <>
-                        {bodyType && <h1> {profileStrings.healthProfileBmiMessage} {bmi} - {bodyType}</h1>}
+                        {bodyType && <h1>BMI {bmi} - {bodyType}</h1>}
                         {verdict && <p>{verdict}</p>}
                     </>}
                 </div>
