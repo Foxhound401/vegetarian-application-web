@@ -43,9 +43,9 @@ const Header = ({locale, setLocale}) => {
                         <NavLink to="/about">{headerStrings.headerAbout}</NavLink>}
                     </Navbar>
                     {!location.pathname.match("/console") && !location.pathname.match("/search") &&
-                    <HeaderSearch placeholder={headerStrings.headerSearchPlaceholder}/>}
+                    <HeaderSearch placeholder={headerStrings.headerSearchPlaceholderUser}/>}
                     {location.pathname.match("/console") &&
-                    <HeaderSearch placeholder={headerStrings.headerSearchPlaceholder}/>}
+                    <HeaderSearch placeholder={headerStrings.headerSearchPlaceholderAdmin}/>}
                 </section>
                 {/*Right-side nav with authentication and profile links*/}
                 <section className="header-section">

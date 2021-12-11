@@ -118,7 +118,8 @@ export let headerStrings = new LocalizedStrings({
     en: {
         headerHome: "Home",
         headerAbout: "About",
-        headerSearchPlaceholder: "What would you have for dinner?",
+        headerSearchPlaceholderUser: "What would you have for dinner?",
+        headerSearchPlaceholderAdmin: "Find articles and users...",
         headerProfile: "Your profile",
         headerSignIn: "Sign in",
         headerSignUp: "Sign up",
@@ -126,7 +127,8 @@ export let headerStrings = new LocalizedStrings({
     vi: {
         headerHome: "Trang chủ",
         headerAbout: "Giới thiệu",
-        headerSearchPlaceholder: "Tối nay ăn gì?",
+        headerSearchPlaceholderUser: "Tối nay ăn gì?",
+        headerSearchPlaceholderAdmin: "Tìm bài đăng hoặc người dùng...",
         headerProfile: "Hồ sơ",
         headerSignIn: "Đăng nhập",
         headerSignUp: "Đăng ký",
@@ -147,10 +149,10 @@ export let articleStatusStrings = new LocalizedStrings({
         statusRejected: "Rejected by admin.",
         statusRejectedShort: "Rejected",
         statusDraft: "- - - DRAFT - - -",
-        statusPrefer:"Includes your preferred ingredients.",
-        statusTendency:"Based on your favorite recipes.",
-        statusBehavior:"Based on your recent search history.",
-        statusPopular:"Popular recipe.",
+        statusPrefer: "Includes your preferred ingredients.",
+        statusTendency: "Based on your favorite recipes.",
+        statusBehavior: "Based on your recent search history.",
+        statusPopular: "Popular recipe.",
     },
     vi: {
         statusPending: "Đang chờ duyệt.",
@@ -160,10 +162,10 @@ export let articleStatusStrings = new LocalizedStrings({
         statusRejected: "Không được duyệt.",
         statusRejectedShort: "Không được duyệt",
         statusDraft: "- - - BẢN NHÁP - - -",
-        statusPrefer:"Những món có nguyên liệu ưa thích.",
-        statusTendency:"Dựa trên sở thích của bạn.",
-        statusBehavior:"Dựa trên lịch sử tìm kiếm gần nhất.",
-        statusPopular:"Công thức phổ biến.",
+        statusPrefer: "Những món có nguyên liệu ưa thích.",
+        statusTendency: "Dựa trên sở thích của bạn.",
+        statusBehavior: "Dựa trên lịch sử tìm kiếm gần nhất.",
+        statusPopular: "Công thức phổ biến.",
     }
 });
 
