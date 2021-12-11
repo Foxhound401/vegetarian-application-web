@@ -33,7 +33,7 @@ export let consoleDisplayStrings = new LocalizedStrings({
         consoleMemberLabelUser:"User",
         consoleMemberLabelStatusTrue:"Account is active",
         consoleMemberLabelStatusFalse:"Account is deactivated",
-        consoleFlag3day:"Flags in the past 3 days",
+        consoleFlag3day:"Total flags",
         consolePercentFlag:"Flagged rate (%)"
     },
     vi: {
@@ -69,7 +69,7 @@ export let consoleDisplayStrings = new LocalizedStrings({
         consoleMemberLabelUser:"Thành viên",
         consoleMemberLabelStatusTrue:"Đã kích hoạt",
         consoleMemberLabelStatusFalse:"Chưa kích hoạt",
-        consoleFlag3day:"Số cờ từ ba ngày trước",
+        consoleFlag3day:"Tổng số cờ",
         consolePercentFlag:"Tỉ lệ cắm cờ (%)"
     }
 });

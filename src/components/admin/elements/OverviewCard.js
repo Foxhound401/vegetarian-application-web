@@ -16,7 +16,8 @@ const OverviewCard = ({url, number, hideNumber, text, action}) => {
         <div className="overview-card">
             {url && <Link className="card__url" to={url}/>}
             <div className="card__details">
-                {!hideNumber && <>{number && number >= 0 ? <p className={`card-stat-number ${textColor}`}>{number}</p>
+                {!hideNumber && <>{number && number >= 0 ?
+                    <p className={`card-stat-number ${textColor}`}>{Math.round(number)}</p>
                     : <p className={`card-stat-number text-positive`}>0</p>}</>}
                 {text && <p className="card-stat-text">{text}</p>}
                 {action && <p className="card-stat-action">{action} <FaAngleRight/></p>}
