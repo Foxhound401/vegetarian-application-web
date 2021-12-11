@@ -4,7 +4,7 @@ import OverviewCard from "./elements/OverviewCard";
 import Panel from "../commons/elements/containers/Panel";
 import {apiUrl} from "../../helpers/Variables";
 import {UserContext} from "../../context/UserContext";
-import { LocaleContext } from "context/LocaleContext";
+import {LocaleContext} from "context/LocaleContext";
 
 
 const ConsoleHome = () => {
@@ -35,7 +35,6 @@ const ConsoleHome = () => {
     const [recipeCount, setRecipeCount] = useState(0);
     const [videoCount, setVideoCount] = useState(0);
     const [blogCount, setBlogCount] = useState(0);
-    const [count, setCount] = useState(0);
     strings.setLanguage(useContext(LocaleContext));
     // Generates request headers
     let headers = new Headers();
@@ -84,9 +83,9 @@ const ConsoleHome = () => {
                                   number={blogCount} text={strings.pendingBlogs} action={strings.review}/>
                 </Panel>
                 <Panel filler="overview-card">
-                    <OverviewCard url={"/console/manage-categories"}
+                    <OverviewCard url={"/console/manage-categories"} hideNumber={true}
                                   text={strings.categories} action={strings.manage}/>
-                    <OverviewCard url={"/console/manage-members"}
+                    <OverviewCard url={"/console/manage-members"} hideNumber={true}
                                   text={strings.members} action={strings.manage}/>
                 </Panel>
             </div>

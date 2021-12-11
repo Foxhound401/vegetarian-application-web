@@ -80,13 +80,13 @@ const ConsoleReviewBlog = () => {
 
     // Handles flagging violations
     const [flagMessage, setFlagMessage] = useState("");
-    const flagArticle = async (e, isFlagged) => {
+    const flagArticle = async (e) => {
         e.preventDefault();
-        const isConfirmed = window.confirm(isFlagged ? consoleDisplayStrings.consoleConfirmFlag : consoleDisplayStrings.consoleConfirmUnflag)
+        const isConfirmed = window.confirm(!data.is_flagged ? consoleDisplayStrings.consoleConfirmFlag : consoleDisplayStrings.consoleConfirmUnflag)
         if (isConfirmed) {
             // Generates request body
             let body = JSON.stringify({
-                "is_flagged": !isFlagged,
+                "is_flagged": !data.is_flagged,
                 "message": flagMessage,
             });
             // Generates request

@@ -78,7 +78,7 @@ const ConsoleReviewRecipe = () => {
     const [flagMessage, setFlagMessage] = useState("");
     const flagArticle = async (e) => {
         e.preventDefault();
-        const isConfirmed = window.confirm(data.is_flagged ? consoleDisplayStrings.consoleConfirmFlag : consoleDisplayStrings.consoleConfirmUnflag)
+        const isConfirmed = window.confirm(!data.is_flagged ? consoleDisplayStrings.consoleConfirmFlag : consoleDisplayStrings.consoleConfirmUnflag)
         if (isConfirmed) {
             // Generates request body
             let body = JSON.stringify({
