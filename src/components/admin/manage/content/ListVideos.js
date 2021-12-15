@@ -32,7 +32,8 @@ const ListVideos = ({user, filter, isLoading, isError, fetchData}) => {
                                        time={item.time_created}
                                        isFavorite={item.is_like}
                                        totalLikes={item.totalLike}
-                                       status={item.status}/>))}
+                                       status={item.status}
+                                       flagged={item.is_flagged}/>))}
                     </> : <PanelEmp/>}
                 </> : <PanelErr reload={fetchData} api={api}/>}
             </> : <PanelLoader/>}

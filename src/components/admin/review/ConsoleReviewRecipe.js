@@ -76,8 +76,10 @@ const ConsoleReviewRecipe = () => {
 
     // Handles flagging violations
     const [flagMessage, setFlagMessage] = useState("");
+    const [isFlagging, setIsFlagging] = useState(false);
     const flagArticle = async (e) => {
         e.preventDefault();
+        setIsFlagging(true);
         const isConfirmed = window.confirm(!data.is_flagged ? consoleDisplayStrings.consoleConfirmFlag : consoleDisplayStrings.consoleConfirmUnflag)
         if (isConfirmed) {
             // Generates request body
@@ -97,11 +99,14 @@ const ConsoleReviewRecipe = () => {
                 const response = await fetch(api, request);
                 if (response.ok) {
                     await fetchData();
+                    setIsFlagging(false);
                 } else if (response.status >= 400 && response.status < 600) {
                     alert(requestErrorStrings.requestErrorStatus + response.status);
+                    setIsFlagging(false);
                 }
             } catch (error) {
                 alert(requestErrorStrings.requestErrorException + error);
+                setIsFlagging(false);
             }
         }
     }
@@ -135,11 +140,13 @@ const ConsoleReviewRecipe = () => {
                                   onChange={e => setFlagMessage(e.target.value)}
                                   disabled={data.is_flagged}/>
                     </label>
-                    {!data.is_flagged ?
-                        <button className="button-dark" onClick={e => flagArticle(e)}>
-                            <RiFlag2Fill/> {consoleDisplayStrings.consoleAddFlag}</button>
-                        : <button className="button-light" onClick={e => flagArticle(e)}>
-                            <RiFlag2Fill/> {consoleDisplayStrings.consoleRemoveFlag}</button>}
+                    {!isFlagging ? <>
+                        {!data.is_flagged ?
+                            <button className="button-dark" onClick={e => flagArticle(e)}>
+                                <RiFlag2Fill/> {consoleDisplayStrings.consoleAddFlag}</button>
+                            : <button className="button-light" onClick={e => flagArticle(e)}>
+                                <RiFlag2Fill/> {consoleDisplayStrings.consoleRemoveFlag}</button>}
+                    </> : <button disabled>...</button>}
                 </div>
             </div>}
             <div className="console-article">

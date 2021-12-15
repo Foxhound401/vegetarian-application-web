@@ -21,7 +21,7 @@ const Login = ({background}) => {
             }}>{authDisplayStrings.loginSignUpLink}</Link></p>
             {/*Social authentication*/}
             <h2>{authDisplayStrings.loginSocial}</h2>
-            <LoginFacebook history={history} background={background} setIsLoggingIn={setIsLoggingIn}/>
+            {/*<LoginFacebook history={history} background={background} setIsLoggingIn={setIsLoggingIn}/>*/}
             <LoginGoogle history={history} background={background} setIsLoggingIn={setIsLoggingIn}/>
             {/*Email authentication*/}
             <h2>{authDisplayStrings.loginEmail}</h2>

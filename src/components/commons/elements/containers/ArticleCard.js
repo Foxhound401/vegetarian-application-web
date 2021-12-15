@@ -6,13 +6,13 @@ import {UserContext} from "../../../../context/UserContext";
 import moment from "moment";
 import {Link} from "react-router-dom";
 import placeholderThumbnail from "../../../../assets/card-thumbnail-default.png";
-import {FaHeart, FaRegHeart} from "react-icons/all";
+import {FaHeart, FaRegHeart, RiFlag2Line} from "react-icons/all";
 
 const ArticleCard = ({
                          className, id, type, hideThumbnail,
                          title, subtitle, thumbnail,
                          userId, firstName, lastName, time,
-                         totalLikes, isFavorite, status, recommendationCriteria
+                         totalLikes, isFavorite, status, recommendationCriteria, flagged
                      }) => {
     const user = useContext(UserContext);
     articleStatusStrings.setLanguage(useContext(LocaleContext));
@@ -46,7 +46,7 @@ const ArticleCard = ({
             <div className="card__details">
                 {status &&
                 <p className={`card__article-status ${statusColor[status - 1]}`}>
-                    {statusText[status - 1]}
+                    {flagged && <RiFlag2Line/>} {statusText[status - 1]}
                 </p>}
                 <div className="card__glance">
                     {totalLikes !== undefined &&

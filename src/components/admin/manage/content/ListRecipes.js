@@ -31,7 +31,8 @@ const ListRecipes = ({user, filter, isLoading, isError, fetchData}) => {
                                          userId={item.user_id}
                                          time={item.time_created}
                                          totalLikes={item.totalLike}
-                                         status={item.status}/>))}
+                                         status={item.status}
+                                         flagged={item.is_flagged}/>))}
                     </> : <PanelEmp/>}
                 </> : <PanelErr reload={fetchData} api={api}/>}
             </> : <PanelLoader/>}
